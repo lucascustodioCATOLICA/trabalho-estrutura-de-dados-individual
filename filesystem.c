@@ -47,7 +47,14 @@ int readFile (Artist* artists)
     return index;
 }
 
-void writeFile (Artist* artists)
+void writeFile (Artist* artists, int size)
 {
+    FILE* file = fopen("dados.txt", "w");
+    if (file == NULL) {
+        printf("Arquivo nao pode ser aberto\n");
+        return;
+    }
+
+    
     return;
 }

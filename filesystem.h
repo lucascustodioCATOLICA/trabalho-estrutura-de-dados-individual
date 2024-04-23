@@ -8,6 +8,6 @@
 #include "types.h"
 
 int readFile(Artist*);
-void writeFile(Artist*);
+void writeFile(Artist*, int);
 
 #endif

@@ -36,6 +36,7 @@ int insertArtist(Artist* artists, int size)
     int newSize = size+1;
 
     sort(artists, newSize);
+    writeFile(artists, newSize);
     return newSize;
 }
 
