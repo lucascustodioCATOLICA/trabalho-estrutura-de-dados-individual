@@ -7,11 +7,10 @@
 int main ()
 {
     setlocale(LC_ALL, "");
-    Artist* artists = readFile();
-    unsigned long long SIZE = (unsigned long long) sizeof (artists) ;
-    printf("%lld \n", SIZE);
-    for (int i = 0; i < SIZE-1; i++) { // tem q ter alguma forma de pegasr o tamanho do arraty
-        printf("%s \n", artists[i].name);
+    Artist* artists = (Artist*) malloc(sizeof(Artist) * ARTISTS_LENGTH);
+    int size = readFile(artists);
+    if(size == -1) {
+        return 1;
     }
 
     int input = 0;
@@ -28,7 +27,7 @@ int main ()
         switch (input)
         {
         case 1:
-            insertArtist(artists);
+            insertArtist(artists, size);
             break;
         case 2:
             removeArtist(artists);

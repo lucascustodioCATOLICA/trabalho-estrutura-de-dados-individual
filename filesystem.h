@@ -7,7 +7,7 @@
 
 #include "types.h"
 
-Artist* readFile();
+int readFile(Artist*);
 void writeFile(Artist*);
 
 #endif

@@ -1,13 +1,8 @@
 #include "operations.h"
 
-void insertArtist(Artist* artists)
+void insertArtist(Artist* artists, int size)
 {
-    const int SIZE = sizeof(artists) / sizeof(Artist);
-    printf("%d \n", SIZE);
-    for (int i = 0; i < SIZE-1; i++) {
-        printf("%s \n", artists[i].name);
-    }
-    // sort(artists);
+    sort(artists, size);
     return;
 }
 

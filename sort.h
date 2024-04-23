@@ -7,6 +7,6 @@
 
 #include "types.h"
 
-void sort(Artist*);
+void sort(Artist*, int size);
 
 #endif

@@ -2,14 +2,12 @@
 
 enum LINE_STATUS {NAME, GENDER, BORN_AT, ALBUMS} typedef LINE_STATUS;
 
-Artist* readFile ()
-{
-    Artist* artists = (Artist*) malloc(sizeof(Artist) * ARTISTS_LENGTH);
-    
+int readFile (Artist* artists)
+{   
     FILE* file = fopen("dados.txt", "r");
     if (file == NULL) {
         printf("Arquivo nao pode ser aberto\n");
-        return NULL;
+        return -1;
     }
 
     char line[256];
@@ -46,7 +44,7 @@ Artist* readFile ()
 
     fclose(file);
 
-    return artists;
+    return index;
 }
 
 void writeFile (Artist* artists)
