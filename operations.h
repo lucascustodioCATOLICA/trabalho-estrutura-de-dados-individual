@@ -1,10 +1,12 @@
 #ifndef OPERATIONS
 #define OPERATIONS
 
+#include <ctype.h>
+
 #include "types.h"
 #include "sort.h"
 
-void insertArtist(Artist*, int);
+int insertArtist(Artist*, int);
 void removeArtist(Artist*);
 void editArtist(Artist*);
 void binarySearchByName(Artist*);

@@ -1,7 +1,7 @@
 #ifndef TYPES
 #define TYPES
 
-#define ARTISTS_LENGTH 15
+#define MAX_LENGTH 99
 
 struct Album {
     char name[64];

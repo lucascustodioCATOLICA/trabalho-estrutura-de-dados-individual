@@ -7,7 +7,7 @@
 int main ()
 {
     setlocale(LC_ALL, "");
-    Artist* artists = (Artist*) malloc(sizeof(Artist) * ARTISTS_LENGTH);
+    Artist* artists = (Artist*) malloc(sizeof(Artist) * MAX_LENGTH);
     int size = readFile(artists);
     if(size == -1) {
         return 1;
@@ -27,7 +27,7 @@ int main ()
         switch (input)
         {
         case 1:
-            insertArtist(artists, size);
+            size = insertArtist(artists, size);
             break;
         case 2:
             removeArtist(artists);
