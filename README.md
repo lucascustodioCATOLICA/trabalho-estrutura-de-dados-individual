@@ -1,3 +1,3 @@
 # Como executar:
 
-`gcc main.c filesystem.c -o output.exe`
+`gcc main.c filesystem.c .\operations.c .\sort.c -o output.exe`
