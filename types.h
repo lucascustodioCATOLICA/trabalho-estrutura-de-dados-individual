@@ -12,6 +12,7 @@ struct Artist {
     char gender[64];
     char bornAt[64];
     Album albums[64];
+    int albumsSize;
 } typedef Artist;
 
 #endif
