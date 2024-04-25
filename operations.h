@@ -5,6 +5,8 @@
 
 #include "types.h"
 #include "sort.h"
+#include "filesystem.h"
+#include "utils.h"
 
 int insertArtist(Artist*, int);
 void removeArtist(Artist*);

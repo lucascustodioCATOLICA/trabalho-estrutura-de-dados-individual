@@ -15,6 +15,7 @@ int readFile (Artist* artists)
     int index = 0;
     int albuns_index = 0;
     while(fgets(line, sizeof(line), file) != NULL) { 
+        removeNewlineCh(line);
         switch (lineStatus)
         {
             case NAME:
@@ -35,6 +36,7 @@ int readFile (Artist* artists)
                     albuns_index++;
                     break;
                 }
+                (artists + index)->albumsSize = albuns_index;
                 albuns_index = 0;
                 lineStatus = NAME;
                 index++;
@@ -55,6 +57,17 @@ void writeFile (Artist* artists, int size)
         return;
     }
 
+    for(int i=0; i<size; i++) {
+        fprintf(file, "%s \n", artists[i].name);
+        fprintf(file, "%s \n", artists[i].gender);
+        fprintf(file, "%s \n", artists[i].bornAt);
+        for(int j=0; j<artists[i].albumsSize; j++) {
+            fprintf(file, "%s \n", artists[i].albums[j].name);
+        }
+        fprintf(file, "========== \n");
+    }
+
+    fclose(file);
     
     return;
 }
