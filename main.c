@@ -30,10 +30,10 @@ int main ()
             size = insertArtist(artists, size);
             break;
         case 2:
-            removeArtist(artists, size);
+            size = removeArtist(artists, size);
             break;
         case 3:
-            editArtist(artists);
+            editArtist(artists, size);
             break;
         case 4:
             binarySearchByName(artists);
