@@ -30,7 +30,7 @@ int main ()
             size = insertArtist(artists, size);
             break;
         case 2:
-            removeArtist(artists);
+            removeArtist(artists, size);
             break;
         case 3:
             editArtist(artists);

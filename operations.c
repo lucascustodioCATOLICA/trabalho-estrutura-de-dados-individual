@@ -48,8 +48,28 @@ int insertArtist(Artist* artists, int size)
     return newSize;
 }
 
-void removeArtist(Artist* artists)
+void removeArtist(Artist* artists, int size)
 {
+    char nameToRemove[64];
+    Artist* newArtists = (Artist*) malloc(sizeof(Artist) * MAX_LENGTH);
+
+    printf("Remoção de um artista \n\n");
+    printf("Digite o Nome do Artista: \n");
+    fflush(stdin);
+    fgets(nameToRemove, sizeof(nameToRemove), stdin);
+    removeNewlineCh(nameToRemove);
+
+    int newArtistsIndex = 0;
+    for(int i=0; i<size; i++) {
+        if(strcmp(nameToRemove, artists[i].name) != 0) {
+            newArtists[newArtistsIndex] = artists[i];
+            newArtistsIndex++;
+        }
+    }
+
+    int newSize = size-1;
+    artists = newArtists;
+    writeFile(artists, newSize);
     return; 
 }
 

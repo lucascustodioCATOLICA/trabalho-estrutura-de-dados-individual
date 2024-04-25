@@ -9,7 +9,7 @@
 #include "utils.h"
 
 int insertArtist(Artist*, int);
-void removeArtist(Artist*);
+void removeArtist(Artist*, int);
 void editArtist(Artist*);
 void binarySearchByName(Artist*);
 void SequencialSearchByAlbum(Artist*);
