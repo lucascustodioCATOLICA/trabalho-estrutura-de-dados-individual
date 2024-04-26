@@ -130,12 +130,37 @@ void editArtist(Artist* artists, int size)
         }
     }
 
-    printf("Usuario nao encontrado!! \n\n");
+    printf("Artista nao encontrado!! \n\n");
     return; 
 }
 
-void binarySearchByName(Artist* artists)
+void binarySearchByName(Artist* artists, int size)
 {
+    sort(artists, size);
+
+    char nameToSearch[64];
+    printf("Busca binária por um artista \n\n");
+    printf("Digite o Nome do Artista: \n");
+    fflush(stdin);
+    fgets(nameToSearch, sizeof(nameToSearch), stdin);
+    removeNewlineCh(nameToSearch);
+
+    Artist artist = binarySearch(artists, nameToSearch, 0, size);
+    if(strcmp(artist.name, "NULL") == 0) {
+        printf("Artista nao encontrado!! \n\n");
+        return;
+    }
+
+    printf("--- \n");
+    printf("Nome: %s \n", artist.name);
+    printf("Genero musical: %s \n", artist.gender);
+    printf("Local de surgimento: %s \n", artist.bornAt);
+    printf("Albuns: \n");
+    for(int i=0; i<artist.albumsSize; i++) {
+        printf("  %s \n", artist.albums[i].name);
+    }
+    printf("--- \n");
+    
     return; 
 }
 

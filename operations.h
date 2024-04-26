@@ -7,11 +7,12 @@
 #include "sort.h"
 #include "filesystem.h"
 #include "utils.h"
+#include "search.h"
 
 int insertArtist(Artist*, int);
 int removeArtist(Artist*, int);
 void editArtist(Artist*, int);
-void binarySearchByName(Artist*);
+void binarySearchByName(Artist*, int);
 void SequencialSearchByAlbum(Artist*);
 
 #endif

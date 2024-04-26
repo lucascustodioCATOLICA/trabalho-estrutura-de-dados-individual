@@ -36,7 +36,7 @@ int main ()
             editArtist(artists, size);
             break;
         case 4:
-            binarySearchByName(artists);
+            binarySearchByName(artists, size);
             break;
         case 5:
             SequencialSearchByAlbum(artists);

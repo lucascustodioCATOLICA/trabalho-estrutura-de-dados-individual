@@ -2,7 +2,7 @@
 
 ## Para compilar:
 
-`gcc main.c filesystem.c .\operations.c .\sort.c .\utils.c -o output.exe`
+`gcc main.c filesystem.c .\operations.c .\sort.c .\utils.c .\search.c -o output.exe`
 
 ## Para executar:
 

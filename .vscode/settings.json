@@ -2,6 +2,8 @@
   "files.associations": {
     "locale.h": "c",
     "stdlib.h": "c",
-    "operations.h": "c"
+    "operations.h": "c",
+    "sort.h": "c",
+    "search.h": "c"
   }
 }
