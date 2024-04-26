@@ -30,6 +30,7 @@ int insertArtist(Artist* artists, int size)
         printf("Adicionar Album: \n");
         printf("8 - Confirmar albums e Voltar \n");
         printf("9 - Voltar \n");
+        fflush(stdin);
         fgets(new.albums[albums_index].name, sizeof(new.albums[albums_index].name), stdin);
         removeNewlineCh(new.albums[albums_index].name);
         if(new.albums[albums_index].name[0] == '9') return size;
