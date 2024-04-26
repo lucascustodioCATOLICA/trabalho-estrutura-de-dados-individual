@@ -13,6 +13,6 @@ int insertArtist(Artist*, int);
 int removeArtist(Artist*, int);
 void editArtist(Artist*, int);
 void binarySearchByName(Artist*, int);
-void SequencialSearchByAlbum(Artist*);
+void SequencialSearchByAlbum(Artist*, int);
 
 #endif

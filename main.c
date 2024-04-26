@@ -39,7 +39,7 @@ int main ()
             binarySearchByName(artists, size);
             break;
         case 5:
-            SequencialSearchByAlbum(artists);
+            SequencialSearchByAlbum(artists, size);
             break;
         default:
             break;

@@ -113,6 +113,7 @@ void editArtist(Artist* artists, int size)
                 printf("Adicionar Album: \n");
                 printf("8 - Confirmar albums e Voltar \n");
                 printf("9 - Voltar \n");
+                fflush(stdin);
                 fgets(new.albums[albums_index].name, sizeof(new.albums[albums_index].name), stdin);
                 removeNewlineCh(new.albums[albums_index].name);
                 if(new.albums[albums_index].name[0] == '9') return;
@@ -164,7 +165,33 @@ void binarySearchByName(Artist* artists, int size)
     return; 
 }
 
-void SequencialSearchByAlbum(Artist* artists)
+void SequencialSearchByAlbum(Artist* artists, int size)
 {
-    return; 
+    char albumToSeach[64];
+    printf("Busca sequencial por um álbum \n\n");
+    printf("Digite o Nome do Album: \n");
+    fflush(stdin);
+    fgets(albumToSeach, sizeof(albumToSeach), stdin);
+    removeNewlineCh(albumToSeach);
+
+    for(int i=0; i<size; i++) {
+        for(int j=0; j<artists[i].albumsSize; j++) {
+            removeNewlineCh(artists[i].albums[j].name);
+            if(strcmp(artists[i].albums[j].name, albumToSeach) == 0) {
+                printf("--- \n");
+                printf("Nome: %s \n", artists[i].name);
+                printf("Genero musical: %s \n", artists[i].gender);
+                printf("Local de surgimento: %s \n", artists[i].bornAt);
+                printf("Albuns: \n");
+                for(int k=0; k<artists[i].albumsSize; k++) {
+                    printf("  %s \n", artists[i].albums[k].name);
+                }
+                printf("--- \n");
+                return;
+            }
+        }
+    }
+
+    printf("Album nao encontrado!! \n\n");
+    return;
 }
