@@ -7,3 +7,11 @@
 ## Para executar:
 
 `./output.exe`
+
+## OBS:
+
+Achei um erro no arquivo de dados:
+
+![erro](./erro-dados.jpg)
+
+Adicionei o genero Rock Alternativo para contornar o problema.
