@@ -6,7 +6,7 @@
 
 int main ()
 {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "C.UTF-8");
     Artist* artists = (Artist*) malloc(sizeof(Artist) * MAX_LENGTH);
     int size = readFile(artists);
     if(size == -1) {
